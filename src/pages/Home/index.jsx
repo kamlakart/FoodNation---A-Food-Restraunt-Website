@@ -6,6 +6,7 @@ import Banner from '../../components/Home/Banner';
 import { useDispatch, useSelector } from 'react-redux';
 import './styles.css';
 import { getCartTotal } from '../../redux/features/cartSlice';
+import MenuFilter from '../../components/common/MenuFilter';
 const Home = () => {
   const {totalCount, items} =  useSelector((state) => state.cart);
   const dispatch = useDispatch();
@@ -14,13 +15,10 @@ const Home = () => {
   }, [items])
   return (
     <div className="main-page-content">
-        {/* banner  */}
         <Banner />
-        {/* menu  */}
+        <MenuFilter />
         <Menu list={items} />
-        {/* footer  */}
         <Footer />
-        {/* cartcount */}
         <CartCount cartCount={totalCount}/>
     </div>
   )

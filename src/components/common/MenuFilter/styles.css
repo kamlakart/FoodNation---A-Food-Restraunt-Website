@@ -1,0 +1,77 @@
+.filter-container {
+    background-color: black;
+    height: 5rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.filter-container .filterOptions {
+    background-color: white;
+    width: 20rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    border-radius: 25px;
+}
+
+.filterByPrice {
+    background-color: black;
+    display: flex;
+    width: 12rem;
+    color: white;
+    height: 2rem;
+    border-radius: 25px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+@media(max-width: 800px)
+{
+    .filter-container .filterOptions {
+        width: 18rem;
+        height: 2.5rem;
+        font-size: 0.8rem;
+    }
+
+    .filterByPrice {
+        font-size: 0.6rem;
+        width: 10rem;
+        height: 1.8rem;
+    }
+}
+@media(max-width: 500px)
+{
+    .filter-container .filterOptions {
+        width: 15rem;
+        height: 2rem;
+        font-size: 0.6rem;
+    }
+
+    .filterByPrice {
+        font-size: 0.5rem;
+        width: 8rem;
+        height: 1.6rem;
+    }
+}
+@media(max-width: 320px)
+{
+    .filter-container .filterOptions {
+        width: 12rem;
+        height: 1.5rem;
+        font-size: 0.5rem;
+    }
+
+    .filterByPrice {
+        font-size: 0.4rem;
+        width: 6rem;
+        height: 1.4rem;
+    }
+}
