@@ -1,0 +1,17 @@
+.bottom-logo h1 {
+    font-size: 2rem;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom-logo span{
+    color: orange;
+}
+
+@media(max-width: 800px)
+{
+    .bottom-logo h1{
+        font-size: 1.2rem;
+    }
+}

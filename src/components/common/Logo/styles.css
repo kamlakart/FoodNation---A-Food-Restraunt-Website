@@ -1,0 +1,17 @@
+.logo h1 {
+    font-size: 2rem;
+    color: #000;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo span{
+    color: orange;
+}
+
+@media(max-width: 800px)
+{
+    .logo h1{
+        font-size: 1.2rem;
+    }
+}
