@@ -8,16 +8,45 @@ import './styles.css';
 import { getCartTotal } from '../../redux/features/cartSlice';
 import MenuFilter from '../../components/common/MenuFilter';
 const Home = () => {
-  const {totalCount, items} =  useSelector((state) => state.cart);
+  const {totalCount, items, filterType, type} =  useSelector((state) => state.cart);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getCartTotal());
   }, [items])
+  const changedItem = [];
+  if(type !== 'Default')
+  {
+    items.map((item) => {
+      if(type===item.type)
+      {
+        changedItem.push(item);
+      }
+    })
+  }
+  else
+  {
+    items.map((item) => {
+      changedItem.push(item);
+    })
+  }
+  if(filterType==='ASC')
+  {
+    changedItem.sort((valA, valB) => {
+      return valA.price - valB.price;
+    })
+  }
+  else if(filterType==='DSC')
+  {
+    changedItem.sort((valA, valB) => {
+      return valB.price - valA.price;
+    })
+  }
+
   return (
     <div className="main-page-content">
         <Banner />
         <MenuFilter />
-        <Menu list={items} />
+        <Menu list={changedItem} />
         <Footer />
         <CartCount cartCount={totalCount}/>
     </div>

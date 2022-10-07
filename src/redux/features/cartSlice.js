@@ -6,10 +6,12 @@ const cartSlice = createSlice({
         items: menuItemsData,
         totalAmount: 0,
         totalCount: 0,
+        filterType: 'Default',
+        type: 'Default',
     },
     reducers: {
         getCartTotal: (state) => {
-            let {totalCount, totalAmount} = state.items.reduce((cartTotal, cartItem) => {
+            let {totalCount, totalAmount, filterType} = state.items.reduce((cartTotal, cartItem) => {
                 const {price, quantity} = cartItem;
                 const itemTotal = price * quantity;
                 cartTotal.totalCount += quantity;
@@ -19,6 +21,7 @@ const cartSlice = createSlice({
             {
                 totalAmount: 0,
                 totalCount: 0,
+                filterType: 'Default',
             }
             );
             state.totalAmount = parseInt(totalAmount.toFixed(2));
@@ -42,9 +45,29 @@ const cartSlice = createSlice({
                 return item;
             });
         },
+        changefilterType: (state, action) => {
+            if(state.filterType===action.payload)
+            {
+                state.filterType = 'Default';
+            }
+            else
+            {
+                state.filterType = action.payload;
+            }
+        },
+        setType: (state, action) => {
+            if(state.type === action.payload)
+            {
+                state.type = 'Default';
+            }
+            else
+            {
+                state.type = action.payload;
+            }
+        }
     }
 })
 
-export const {getCartTotal, increase, decrease} = cartSlice.actions;
+export const {getCartTotal, increase, decrease, changefilterType, setType} = cartSlice.actions;
 
 export default cartSlice.reducer;
