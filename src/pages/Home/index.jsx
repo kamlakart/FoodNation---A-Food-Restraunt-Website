@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import CartCount from '../../components/common/CartCount';
 import Footer from '../../components/common/Footer';
 import Menu from '../../components/common/Menu';
@@ -41,11 +41,14 @@ const Home = () => {
       return valB.price - valA.price;
     })
   }
-
+  const MenuRef = useRef();
+  const handleScrollMenu = () => {
+    MenuRef.current.scrollIntoView({behavior: "smooth"});
+  }
   return (
     <div className="main-page-content">
-        <Banner />
-        <MenuFilter />
+        <Banner handleScrollMenu={handleScrollMenu} />
+        <MenuFilter ref={MenuRef} />
         <Menu list={changedItem} />
         <Footer />
         <CartCount cartCount={totalCount}/>

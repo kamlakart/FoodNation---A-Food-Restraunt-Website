@@ -1,0 +1,78 @@
+.filterByMeal {
+    background-color: white;
+    width: 25rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    border-radius: 25px;
+}
+
+.filterByMeal-items {
+    background-color: black;
+    display: flex;
+    width: 18rem;
+    color: white;
+    height: 2rem;
+    border-radius: 25px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.filterByMeal-items h4:hover {
+    background-color: #fff;
+    color: black;
+    width: 5rem;
+    height: 1.4rem;
+    border-radius: 25px;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease-in-out;
+}
+
+@media(max-width: 450px)
+{
+    
+    .filterByMeal {
+        width: 20rem;
+        height: 2rem;
+        font-size: 0.6rem;
+    }
+
+    .filterByMeal-items {
+        font-size: 0.5rem;
+        width: 14rem;
+        height: 1.6rem;
+    }
+
+    .filterByMeal-items h4:hover {
+        width: 3.5rem;
+        height: 1.2rem;
+    }
+}
+@media(max-width: 350px)
+{
+    
+    .filterByMeal {
+        width: 14rem;
+        height: 1.5rem;
+        font-size: 0.5rem;
+    }
+
+    .filterByMeal-items {
+        font-size: 0.4rem;
+        width: 9rem;
+        height: 1.4rem;
+    }
+
+    .filterByMeal-items h4:hover {
+        width: 2.5rem;
+        height: 1rem;
+    }
+}

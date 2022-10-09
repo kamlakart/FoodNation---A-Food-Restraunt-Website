@@ -11,7 +11,7 @@ const cartSlice = createSlice({
     },
     reducers: {
         getCartTotal: (state) => {
-            let {totalCount, totalAmount, filterType} = state.items.reduce((cartTotal, cartItem) => {
+            let {totalCount, totalAmount} = state.items.reduce((cartTotal, cartItem) => {
                 const {price, quantity} = cartItem;
                 const itemTotal = price * quantity;
                 cartTotal.totalCount += quantity;
@@ -21,7 +21,6 @@ const cartSlice = createSlice({
             {
                 totalAmount: 0,
                 totalCount: 0,
-                filterType: 'Default',
             }
             );
             state.totalAmount = parseInt(totalAmount.toFixed(2));

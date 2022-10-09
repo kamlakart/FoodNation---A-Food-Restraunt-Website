@@ -3,7 +3,6 @@ import MenuItem from './MenuItem';
 import './styles.css';
 
 const Menu = ({ list }) => {
-
   return (
     <main>
       {list.map((item) =>
