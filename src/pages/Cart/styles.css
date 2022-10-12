@@ -23,3 +23,69 @@
     margin-left: auto;
     margin-top: 3rem;
 }
+
+.Checkoutbtn-container {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    height: 3rem;
+}
+
+.checkout-btn {
+    height: 100%;
+    width: 18rem;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background-color: #000;
+    color: #fff;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.back-btn button {
+    background-color: #000;
+    color: #fff;
+    width: 6rem;
+    height: 100%;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+@media(max-width: 800px)
+{
+    .checkout-btn{
+        width: 16rem;
+        font-size: 1rem;
+    }
+
+}
+
+@media(max-width: 500px)
+{
+    .checkout-btn{
+        width: 14rem;
+        font-size: 0.9rem;
+    }
+
+}
