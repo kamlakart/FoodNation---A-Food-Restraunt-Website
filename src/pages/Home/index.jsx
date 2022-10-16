@@ -41,6 +41,12 @@ const Home = () => {
       return valB.price - valA.price;
     })
   }
+  else
+  {
+    changedItem.sort((valA, valB) => {
+      return valB.priority - valA.priority;
+    })
+  }
   const MenuRef = useRef();
   const handleScrollMenu = () => {
     MenuRef.current.scrollIntoView({behavior: "smooth"});

@@ -63,10 +63,21 @@ const cartSlice = createSlice({
             {
                 state.type = action.payload;
             }
+        }, 
+        purchasedone: (state) => {
+            state.items = state.items.map((item) => {
+                if(item.quantity > 0)
+                {
+                    return {...item, priority: item.quantity + item.priority, quantity: 0};
+                }
+                return item;
+            });
+            state.totalAmount = 0;
+            state.totalCount = 0;
         }
     }
 })
 
-export const {getCartTotal, increase, decrease, changefilterType, setType} = cartSlice.actions;
+export const {getCartTotal, increase, decrease, changefilterType, setType, purchasedone} = cartSlice.actions;
 
 export default cartSlice.reducer;
