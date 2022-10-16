@@ -31,6 +31,7 @@
     align-items: center;
     justify-content: flex-end;
     height: 3rem;
+    background-color: transparent;
 }
 
 .checkout-btn {
@@ -47,6 +48,8 @@
     justify-content: space-around;
     font-weight: 400;
     cursor: pointer;
+    border: none;
+    outline: none;
 }
 
 .back-btn {
