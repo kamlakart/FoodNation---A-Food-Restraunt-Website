@@ -12,7 +12,7 @@ const MenuItem = ({item}) => {
           <p className="head_desc-info"><small>{info}</small></p>
         </div>
         <div className="item-foot_desc">
-          <span className="foot_desc-price">${price}</span>
+          <span className="foot_desc-price">₹{price}</span>
           <ButtonAddRemoveItem quantity={quantity} id={id} />
         </div>
     </div>

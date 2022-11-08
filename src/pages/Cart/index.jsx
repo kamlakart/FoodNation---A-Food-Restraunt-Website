@@ -28,7 +28,7 @@ const Cart = () => {
           <div className="orders-menu">
             <CartMenu list={items} />
           </div>
-          <h3 className="orders-total">Your Total ${totalAmount}</h3>
+          <h3 className="orders-total">Your Total ₹{totalAmount}</h3>
           <div className="Checkoutbtn-container">
             <button className='checkout-btn' onClick={() => {navigate('/purchase'); dispatch(purchasedone());}}>Proceed to Buy ({totalCount} {totalCount>1?<>items</>:<>item</>}) <i className="fas fa-long-arrow-alt-right"></i></button>
           </div>
